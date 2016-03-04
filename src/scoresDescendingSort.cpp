@@ -14,12 +14,36 @@ NOTES:
 */
 
 #include <stdio.h>
-
+#include<malloc.h>
 struct student {
 	char name[10];
 	int score;
 };
-
 void * scoresDescendingSort(struct student *students, int len) {
-	return NULL;
+	int i = 0, j = 0;
+	struct student temp;
+	if (len <=0)
+		return NULL;
+	if (students == NULL)
+		return NULL;
+	if (len == 1)
+	{
+
+	}
+	else
+	{
+		
+		for (i = 0; i < len;i++)
+		{
+			for (j = 0; j < len; j++)
+			{
+				if (students[i].score > students[j].score)
+				{
+					temp = students[i];
+					students[i] = students[j];
+					students[j] = temp;
+				}
+			}
+		}
+	}
 }
